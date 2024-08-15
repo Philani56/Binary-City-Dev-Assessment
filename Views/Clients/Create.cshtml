@@ -1,0 +1,136 @@
+﻿@model Project.Models.Client
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h5>Create Client</h5>
+
+<p class="text-muted text-center mb-4">Please fill in the details below to create a new client. Ensure that all required fields are completed.</p>
+
+<hr />
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="Name" class="form-label text-primary">Name</label>
+                        <input asp-for="Name" class="form-control" placeholder="Enter client's name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="ClientCode" class="form-label text-primary">Client Code</label>
+                        <input asp-for="ClientCode" class="form-control" readonly="readonly" placeholder="Auto-generated" />
+                        <span asp-validation-for="ClientCode" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="ContactId" class="form-label text-primary">Link</label>
+                        <select asp-for="ContactId" class="form-select">
+                            <option value="">Select Contact</option>
+                            @foreach (var item in (SelectList)ViewBag.ContactId)
+                            {
+                                <option value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="d-grid">
+                        <input type="submit" value="Create" class="btn btn-primary btn-block" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h5 {
+        color: #343a40;
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    p.text-muted {
+        color: #6c757d;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        border: 1px solid #dee2e6;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .form-label {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .form-control, .form-select {
+        font-size: 14px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .form-control::placeholder {
+        font-style: italic;
+        color: #6c757d;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .btn-block {
+        width: 100%;
+    }
+
+    .alert {
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+
+    .text-primary {
+        color: #007bff !important;
+    }
+
+    .text-danger {
+        font-size: 12px;
+    }
+
+    .btn-outline-secondary {
+        border-radius: 5px;
+    }
+
+    .d-grid {
+        display: grid;
+    }
+
+    .mt-3 {
+        margin-top: 1rem !important;
+    }
+</style>
