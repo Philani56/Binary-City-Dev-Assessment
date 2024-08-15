@@ -111,6 +111,11 @@ Command Line: If you’re running a web server or application server via command
 - Responsive feedback mechanisms are in place for better user interaction.
 
 ![Alt Text](./images/1.JPG)
+![Alt Text](./images/2.JPG)
+![Alt Text](./images/3.JPG)
+
+![Alt Text](./images/url_1.JPG)
+![Alt Text](./images/url_2.JPG)
 
 ### 📊Database Structure
 - Clients Table: Columns include Name, Client Code, No. of Linked Contacts.
