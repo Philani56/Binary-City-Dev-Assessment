@@ -114,8 +114,8 @@ Command Line: If you’re running a web server or application server via command
 ![Alt Text](./images/2.JPG)
 ![Alt Text](./images/3.JPG)
 
-![Alt Text](./images/url_1.JPG)
-![Alt Text](./images/url_2.JPG)
+![Alt Text](./images/url1.JPG)
+![Alt Text](./images/url2.JPG)
 
 ### 📊Database Structure
 - Clients Table: Columns include Name, Client Code, No. of Linked Contacts.
