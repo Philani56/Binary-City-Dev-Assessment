@@ -37,7 +37,6 @@ Contacts Module
 - Client(s) Tab: View and manage clients linked to the selected contact, with options to unlink clients.
 
 
-
 ![Alt Text](./images/19.JPG)
 
 - If no contact(s) are identified, the system will display the following message:
@@ -120,6 +119,9 @@ Command Line: If you’re running a web server or application server via command
 ### 📊Database Structure
 - Clients Table: Columns include Name, Client Code, No. of Linked Contacts.
 - Contacts Table: Columns include Name, Surname, Email, No. of Linked Clients.
+
+### 🔗Branch Information
+- Please note that the main branch of this repository is on master instead of main. Update your local references accordingly.
 
 ### 📞Contact
 For any inquiries or issues, please contact:
