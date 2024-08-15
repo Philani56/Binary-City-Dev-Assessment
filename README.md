@@ -71,7 +71,7 @@ Contacts Module
 Open your terminal and clone the repository using the following command:
 
 ```bash
-git clone https://github.com/Philani56/Binary-City-Dev-Assessment.git
+git clone https://github.com/Philani56/Binary-City-Dev-Assessment/tree/master
 ```
 
 ### Set Up the Database
